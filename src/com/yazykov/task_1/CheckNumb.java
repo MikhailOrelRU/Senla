@@ -1,4 +1,4 @@
-package com.yazykov.task_1;
+ï»¿package com.yazykov.task_1;
 
 import java.math.BigInteger;
 
@@ -13,7 +13,7 @@ public class CheckNumb {
     }
 
     public static boolean isPrime(int num){
-        if(num  <= 1) throw new IllegalArgumentException("íå âõîäèò â ìíîæåñòâî ïðîñòûõ(ñîñòàâíûõ) ÷èñåë");
+        if(num  <= 1) throw new IllegalArgumentException("Ð½Ðµ Ð²Ñ…Ð¾Ð´Ð¸Ñ‚ Ð² Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ð¾ Ð¿Ñ€Ð¾ÑÑ‚Ñ‹Ñ…(ÑÐ¾ÑÑ‚Ð°Ð²Ð½Ñ‹Ñ…) Ñ‡Ð¸ÑÐµÐ»");
         BigInteger bigInteger = BigInteger.valueOf(num);
         if (bigInteger.isProbablePrime(num)){
             return true;
