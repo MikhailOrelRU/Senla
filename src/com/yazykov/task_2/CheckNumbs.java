@@ -2,9 +2,9 @@ package com.yazykov.task_2;
 
 public class CheckNumbs {
 
-    //возвращает наибольщий общий делитель двух целых чисел
+    //return greatest common divisor 2 integer numbers
     public static long gcd(long a, long b){
-        if(a == 0 && b == 0) throw new IllegalArgumentException("НОД(0,0) - не существует");
+        if(a == 0 && b == 0) throw new IllegalArgumentException("GCD(0,0) - not exist");
 
         a = Math.abs(a);
         b = Math.abs(b);
@@ -16,9 +16,9 @@ public class CheckNumbs {
         }
     }
 
-    //возвращает наименьшее общее кратное двух целых чисел
+    //least common multiple 2 integer numbers
     public static long lcm(long a,long b) {
-        if(a == 0 || b == 0) throw new IllegalArgumentException("НОК(0,x) - не существует");
+        if(a == 0 || b == 0) throw new IllegalArgumentException("LCM(0,х) - not exist");
 
         a = Math.abs(a);
         b = Math.abs(b);

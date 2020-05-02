@@ -6,21 +6,21 @@ import java.util.List;
 public class AlgorithmsTest {
 
     public static void printResult(Packed packed, List<Thing> listThings){
-        System.out.println("Из списка вещей:");
+        System.out.println("From things list:\n");
         for(Thing t: listThings){
             System.out.println(t);
         }
-        System.out.printf("в %s, поместились вещи c общей максимальной ценностью - %s у.ед.",packed,(Algorithms.maxCost(packed, listThings)));
+        System.out.printf("\nin %s, there are things total max cost - %s c.u.\n",packed,(Algorithms.maxCost(packed, listThings)));
     }
 
     public static void main(String[] args) {
-        Packed bag = new Packed("Рюкзак",10);
+        Packed bag = new Packed("Bag",10);
 
-        Thing ball = new Thing("Клубок", 1, 1);
-        Thing bow = new Thing("Бантик", 1, 2);
-        Thing Wiskas = new Thing("Wiskas", 1, 3);
-        Thing trout = new Thing("Форель", 4, 8);
-        Thing cat = new Thing("Мурзик", 5, 100);
+        Thing ball = new Thing("ball", 1, 1);
+        Thing bow = new Thing("bow", 1, 2);
+        Thing Wiskas = new Thing("wiskas", 1, 3);
+        Thing trout = new Thing("trout", 4, 8);
+        Thing cat = new Thing("Murzik", 5, 100);
 
         List<Thing> listPred = new ArrayList();
         listPred.add(ball);

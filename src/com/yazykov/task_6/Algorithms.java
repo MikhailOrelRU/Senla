@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Algorithms {
 
-    //возвращает максимальную ценность списка предметов вмещающихся в обьект Packed
+    //return max cost from list things in Packed
     public static int maxCost(Packed p, List<Thing> list) {
         int n = list.size();
         int maxSize = p.getCapacity();

@@ -8,37 +8,37 @@ public class CheckNumbTest {
         String s2 = "";
 
         if(CheckNumb.isEven(num)){
-            s1 = "четным";
-        }else  s1= "нечетным";
+            s1 = "even";
+        }else  s1= "odd";
 
         try {
             if(CheckNumb.isPrime(num)){
-                s2 = "простым";
-            } else  s2 = "составным";
+                s2 = "prime";
+            } else  s2 = "composite";
         }catch (IllegalArgumentException e){
             s2 = e.getMessage();
         }
-        System.out.printf("Число - %s является: %s, %s.\n", num, s1, s2);
+        System.out.printf("Number - %s is: %s, %s.\n", num, s1, s2);
     }
 
     public static void main(String[] args){
 
-        //Вариант 1 чтения с консоли
-        System.out.print("Введите целое число: ");
+        //Var 1
+        System.out.print("Enter integer number: ");
         Scanner scanner = new Scanner(System.in);
         if (scanner.hasNextInt()) {
             int num = scanner.nextInt();
             numberCheck(num);
-        } else  System.out.println("Ошибка ввода: не является целым числом");
+        } else  System.out.println("Input error");
 
-        /*
-        //Вариант 2 чтения с консоли без выхода при ошибочном вводе
+/*
+        //Var2 read from console
         try {
             int numb = ReadConsole.numberReadWhyle();
             numberCheck(numb);
         }catch (ExitException ex){
             System.out.println(ex.getMessage());
-        }
-        */
+        }*/
+
     }
 }

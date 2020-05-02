@@ -20,6 +20,6 @@ public class Packed {
 
     @Override
     public String toString(){
-        return namePacked + " грузоподьемностью - " + capacity + " у.ед.";
+        return namePacked + " capacity - " + capacity + " c.u.";
     }
 }

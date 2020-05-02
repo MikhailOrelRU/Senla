@@ -7,22 +7,26 @@ public class StringAnalyzingTest {
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
-        System.out.println("Введите строку: ");
+        System.out.println("Please enter string: ");
         String lane = in.nextLine();
 
-        //Буквы и цифры считаются словами
-        //List<String> listWords = StringAnalyzing.toArrayListWordsAndNumbers(lane);
+        try {
+            //letters and numbers is words
+            //List<String> listWords = StringAnalyzing.toArrayListWordsAndNumbers(lane);
+            List<String> listWords = StringAnalyzing.toArrayListWords(lane);
+            System.out.print("Sum words: ");
+            System.out.println(StringAnalyzing.wordsCount(listWords));
+            System.out.println("First letter every word in upperCase:");
+            System.out.println(StringAnalyzing.toUpperCaseFirstLetter(lane));
+            System.out.println("Sorts the specified list into ascending order, according to the natural ordering of its elements:");
+            System.out.println(StringAnalyzing.sortClassic(listWords));
+            System.out.println("Sort case-insensitive:");
+            System.out.println(StringAnalyzing.sortWordsNotCase(listWords));
+            System.out.println("Sort by word size:");
+            System.out.println(StringAnalyzing.sortWordsForLength(listWords));
+        }catch (IllegalArgumentException ex){
+            System.out.println(ex.getMessage());
+        }
 
-        List<String> listWords = StringAnalyzing.toArrayListWords(lane);
-        System.out.print("Количество слов: ");
-        System.out.println(StringAnalyzing.wordsCount(listWords));
-        System.out.println("Первая буква каждого слова заглавная:");
-        System.out.println(StringAnalyzing.toUpperCaseFirstLetter(lane));
-        System.out.println("Сортировка в порядке возрастания, учитывая естественный порядок слов:");
-        System.out.println(StringAnalyzing.sortClassic(listWords));
-        System.out.println("Сортировка без учета регистра");
-        System.out.println(StringAnalyzing.sortWordsNotCase(listWords));
-        System.out.println("Сортировка по количеству букв в слове:");
-        System.out.println(StringAnalyzing.sortWordsForLength(listWords));
     }
 }

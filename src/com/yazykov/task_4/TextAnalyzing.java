@@ -7,7 +7,7 @@ public class TextAnalyzing {
 
     static int getCountWord(String text, String word){
 
-        if(word.equals("") || text.equals("")) throw new IllegalArgumentException("Ошибка ввода");
+        if(word.equals("") || text.equals("")) throw new IllegalArgumentException("Error input");
 
         text = text.toLowerCase();
         word = word.toLowerCase();

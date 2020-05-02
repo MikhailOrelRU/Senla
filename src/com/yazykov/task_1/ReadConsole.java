@@ -6,23 +6,23 @@ import java.io.InputStreamReader;
 
 public class ReadConsole {
 
-    //читает с консоли до тех пор, пока не получит целое число или "exit"
+    //read from console until then not enter integer number or "exit"
     public static Integer numberReadWhyle() throws ExitException{
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Введите целое число или  \"exit\" для выхода: ");
+        System.out.println("Enter integer number or \"exit\" for exit: ");
         boolean exit = false;
         int number = 0;
         while (!exit) {
             try {
                 String s = reader.readLine();
                 if (s.equals("exit")) {
-                    throw new ExitException("Ввод закрыт");
+                    throw new ExitException("Input close");
                 } else {
                     number =  Integer.parseInt(s);
                     exit = true;
                 }
             } catch (NumberFormatException ex) {
-                System.out.println("Вы ввели не целое число, попробуйте еще раз или введите \"exit\" для выхода: ");
+                System.out.println("Input error, try again or enter \"exit\" for exit: ");
             } catch (IOException ex) {
                 ex.printStackTrace();
             }

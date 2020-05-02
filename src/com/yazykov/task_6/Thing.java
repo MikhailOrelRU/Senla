@@ -25,6 +25,6 @@ public class Thing {
 
     @Override
     public String toString(){
-        return name + " весом: " + weight + ", стоимостью: " + cost;
+        return name + " weight: " + weight + ", cost: " + cost;
     }
 }
