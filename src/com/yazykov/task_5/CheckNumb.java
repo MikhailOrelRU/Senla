@@ -6,7 +6,7 @@ public class CheckNumb {
         int next = 0;
 
         while(temp != 0){
-            next = next*10 + temp%10;
+            next = next * 10 + temp % 10;
             temp /= 10;
         }
 
