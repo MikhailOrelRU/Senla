@@ -18,7 +18,7 @@ public class CheckNumbs {
 
     //least common multiple 2 integer numbers
     public static long lcm(long a,long b) {
-        if(a == 0 || b == 0) throw new IllegalArgumentException("LCM(0,õ) - not exist");
+        if(a == 0 || b == 0) throw new IllegalArgumentException("LCM(0,x) - not exist");
 
         a = Math.abs(a);
         b = Math.abs(b);
